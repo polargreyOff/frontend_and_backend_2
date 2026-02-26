@@ -8,6 +8,10 @@ export default function ProductItem({ product, onEdit, onDelete }) {
       <div className="category">{product.category}</div>
       <div className="desc">{product.description}</div>
 
+      <div className="product-image">
+        <img src={product.url} alt="картинка товара" />
+      </div>
+
       <div className="price">{product.price} ₽</div>
 
       <div className="metaRow">

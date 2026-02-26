@@ -7,6 +7,7 @@ export default function ProductModal({ open, mode, initialProduct, onClose, onSu
   const [price, setPrice] = useState("");
   const [stock, setStock] = useState("");
   const [rating, setRating] = useState("");
+  const [url, setUrl] = useState("");
 
   useEffect(() => {
     if (!open) return;
@@ -14,6 +15,7 @@ export default function ProductModal({ open, mode, initialProduct, onClose, onSu
     setName(initialProduct?.name ?? "");
     setCategory(initialProduct?.category ?? "");
     setDescription(initialProduct?.description ?? "");
+    setUrl(initialProduct?.url ?? "");
     setPrice(initialProduct?.price != null ? String(initialProduct.price) : "");
     setStock(initialProduct?.stock != null ? String(initialProduct.stock) : "");
     setRating(initialProduct?.rating != null ? String(initialProduct.rating) : "0");
@@ -29,6 +31,7 @@ export default function ProductModal({ open, mode, initialProduct, onClose, onSu
     const trimmedName = name.trim();
     const trimmedCategory = category.trim();
     const trimmedDescription = description.trim();
+    const trimmedUrl = url.trim();
 
     const parsedPrice = Number(price);
     const parsedStock = Number(stock);
@@ -56,6 +59,7 @@ export default function ProductModal({ open, mode, initialProduct, onClose, onSu
       price: parsedPrice,
       stock: parsedStock,
       rating: parsedRating,
+      url: trimmedUrl
     });
   };
 
@@ -70,7 +74,7 @@ export default function ProductModal({ open, mode, initialProduct, onClose, onSu
         <div className="modalHeader">
           <div className="modalTitle">{title}</div>
           <button className="iconBtn" onClick={onClose} aria-label="Закрыть">
-            ✕
+            <span>✕</span>
           </button>
         </div>
 
@@ -98,6 +102,11 @@ export default function ProductModal({ open, mode, initialProduct, onClose, onSu
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
             />
+          </label>
+
+          <label className="label">
+            Ссылка на картинку
+            <input className="input" value={url} onChange={(e) => setUrl(e.target.value)} />
           </label>
 
           <div className="row2">
