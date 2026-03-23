@@ -222,8 +222,8 @@ const swaggerOptions = {
           type: "object",
           required: ["email", "password"],
           properties: {
-            email: { type: "string", example: "admin@tea.local" },
-            password: { type: "string", example: "admin123" },
+            email: { type: "string", example: "tea@mail.com" },
+            password: { type: "string", example: "123456" },
           },
         },
         TokenPair: {
@@ -1030,7 +1030,7 @@ app.listen(PORT, () => {
   console.log(`Server started: http://localhost:${PORT}`);
   console.log(`Swagger UI: http://localhost:${PORT}/api-docs`);
   console.log("Demo accounts:");
-  console.log("admin@tea.local / admin123");
-  console.log("seller@tea.local / seller123");
-  console.log("user@tea.local / user123");
+  console.log("admin@gmail.com / admin123");
+  console.log("seller@gmail.com / seller123");
+  console.log("user@gmail.com / user123");
 });
