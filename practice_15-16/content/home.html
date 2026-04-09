@@ -1,0 +1,50 @@
+<section class="home-grid">
+  <div class="stack">
+    <article class="inner-card">
+      <h2>Добавить заметку</h2>
+      <p class="muted">
+        Эта форма подгружается динамически внутрь App Shell. После первого визита shell
+        остаётся в кэше и открывается почти мгновенно.
+      </p>
+
+      <form id="note-form" class="note-form">
+        <label>
+          Заголовок
+          <input id="note-title" type="text" maxlength="60" placeholder="имя заметки" required />
+        </label>
+
+        <label>
+          Текст заметки
+          <textarea
+            id="note-body"
+            maxlength="280"
+            placeholder="текст заметки"
+            required
+          ></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="action-button success" type="submit">Добавить заметку</button>
+          <button class="action-button secondary" id="clear-notes" type="button">
+            Очистить все
+          </button>
+        </div>
+      </form>
+    </article>
+  </div>
+
+  <article class="inner-card">
+    <div class="note-row">
+      <div>
+        <h2>Список заметок</h2>
+        <p id="notes-count" class="muted">0 заметок</p>
+      </div>
+    </div>
+
+    <p id="notes-empty" class="muted">
+      Пока заметок нет. Добавь первую запись и проверь, что она переживает перезагрузку и офлайн.
+    </p>
+
+    <ul id="notes-list" class="notes-list"></ul>
+  </article>
+</section>
