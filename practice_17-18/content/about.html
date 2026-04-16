@@ -1,0 +1,37 @@
+<section class="about-grid">
+  <article class="inner-card">
+    <h2>Что реализовано</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <strong>Напоминания</strong>
+        <p class="muted">Каждая заметка может содержать `id` и `reminder` timestamp в localStorage.</p>
+      </div>
+      <div class="stat-box">
+        <strong>Сервер</strong>
+        <p class="muted">Node.js сервер хранит активные таймеры в `Map` и планирует push через `setTimeout`.</p>
+      </div>
+      <div class="stat-box">
+        <strong>Snooze</strong>
+        <p class="muted">Уведомление содержит кнопку «Отложить на 5 минут», которую обрабатывает Service Worker.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="inner-card">
+    <h2>Как тестировать</h2>
+    <ul class="notes-list">
+      <li class="note-item">
+        <h3>Обычная заметка</h3>
+        <p>Создай заметку и проверь, что она сохраняется в localStorage и появляется сразу в интерфейсе.</p>
+      </li>
+      <li class="note-item">
+        <h3>Напоминание</h3>
+        <p>Создай заметку с датой на 1-2 минуты вперёд и дождись push-уведомления.</p>
+      </li>
+      <li class="note-item">
+        <h3>Отложить на 5 минут</h3>
+        <p>Нажми action-кнопку в уведомлении и проверь, что сервер переносит напоминание ещё на 5 минут.</p>
+      </li>
+    </ul>
+  </article>
+</section>

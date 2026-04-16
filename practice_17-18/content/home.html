@@ -1,0 +1,61 @@
+<section class="home-grid">
+  <div class="stack">
+    <article class="inner-card">
+      <h2>Добавить заметку</h2>
+
+      <form id="note-form" class="note-form">
+        <label>
+          Заголовок
+          <input id="note-title" type="text" maxlength="60" placeholder="Имя заметки" required />
+        </label>
+
+        <label>
+          Текст заметки
+          <textarea id="note-body" maxlength="280" placeholder="Текст заметки" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="action-button success" type="submit">Добавить заметку</button>
+          <button class="action-button secondary" id="clear-notes" type="button">
+            Очистить все
+          </button>
+        </div>
+      </form>
+    </article>
+
+    <article class="inner-card">
+      <h2>Добавить напоминание</h2>
+
+      <form id="reminder-form" class="note-form">
+        <label>
+          Текст напоминания
+          <input id="reminder-text" type="text" maxlength="80" required />
+        </label>
+
+        <label>
+          Дата и время
+          <input id="reminder-time" type="datetime-local" required />
+        </label>
+
+        <div class="form-actions">
+          <button class="action-button success" type="submit">Добавить с напоминанием</button>
+        </div>
+      </form>
+    </article>
+  </div>
+
+  <article class="inner-card">
+    <div class="note-row">
+      <div>
+        <h2>Список заметок</h2>
+        <p id="notes-count" class="muted">0 заметок</p>
+      </div>
+    </div>
+
+    <p id="notes-empty" class="muted">
+      Пока заметок нет. Добавь обычную заметку или напоминание и проверь, что они сохраняются.
+    </p>
+
+    <ul id="notes-list" class="notes-list"></ul>
+  </article>
+</section>
